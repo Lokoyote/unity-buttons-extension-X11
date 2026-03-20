@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.unity-buttons"
+          path="/org/gnome/shell/extensions/unity-buttons/">
+
+    <key name="window-size-percent" type="i">
+      <default>80</default>
+      <summary>Maximum unmaximized window size (screen %)</summary>
+      <description>
+        When a window is unmaximized, it will be shrunk to this percentage of
+        the work area if it is larger. Smaller windows keep their original size.
+      </description>
+      <range min="50" max="95"/>
+    </key>
+
+    <key name="min-open-size-percent" type="i">
+      <default>0</default>
+      <summary>Minimum open size for maximizable windows (0 = disabled)</summary>
+      <description>
+        New windows that have a maximize button and open smaller than this
+        percentage will be enlarged and centered automatically.
+      </description>
+      <range min="0" max="90"/>
+    </key>
+
+    <key name="original-layout-cache" type="s">
+      <default>''</default>
+      <summary>Backup of the original button-layout</summary>
+      <description>
+        Stored automatically when the extension enables. Used to restore
+        the user's button-layout on disable, even after a crash.
+      </description>
+    </key>
+
+  </schema>
+</schemalist>
